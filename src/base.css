@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #F4F8F9;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+}
+
+.menu {
+    width: 20%;
+    background-color: #276678;
+    padding: 20px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu li {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    width: 100%;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu a:hover {
+    background-color: #C4DCC3;
+    color: #276678;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    z-index: 100;
+}
+
+.menu a::before {
+    content: '🦷';
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #C4DCC3;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover::before {
+    color: #276678;
+}
+
+.header {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+    background: #AFCED6;
+}
+
+.header img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    padding: 20px;
+    background-color: #F4F8F9;
+    color: #333333;
+}
+
+.content h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    margin-bottom: 10px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.content h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #76A3B9;
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.content ul li {
+    padding: 5px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.footer {
+    background-color: #76A3B9;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    flex-shrink: 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+table th, table td {
+    border: 1px solid #E8E8E8;
+    padding: 10px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+table th {
+    background-color: #76A3B9;
+    color: #FFF;
+}
+
+table tr:hover {
+    background-color: #F0F8FF;
+    transition: background-color 0.3s ease;
+}
+
+.tabela-serviços, .tabela-de-preço {
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.tabela-serviços table, 
+.tabela-de-preço table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+}
+
+.tabela-serviços thead, 
+.tabela-de-preço thead {
+    background-color: #76A3B9;
+    color: #FFFFFF;
+}
+
+.tabela-serviços th, .tabela-serviços td, 
+.tabela-de-preço th, .tabela-de-preço td {
+    padding: 15px 10px;
+    border: 1px solid #E8E8E8;
+    font-size: 1rem;
+}
+
+.tabela-serviços tbody tr:nth-child(even),
+.tabela-de-preço tbody tr:nth-child(even) {
+    background-color: #F4F8F9;
+}
+
+.tabela-serviços tbody tr:hover,
+.tabela-de-preço tbody tr:hover {
+    background-color: #AFCED6;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease;
+}
+
+.tabela-serviços th, 
+.tabela-de-preço th {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.tabela-serviços td, 
+.tabela-de-preço td {
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .tabela-serviços table, 
+    .tabela-de-preço table {
+        font-size: 0.9rem;
+    }
+}
+
+#contactForm {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+#contactForm h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #76A3B9;
+    text-align: center;
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    background-color: #F4F8F9;
+    color: #333;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm textarea:focus {
+    border-color: #76A3B9;
+    box-shadow: 0 0 5px rgba(118, 163, 185, 0.5);
+    outline: none;
+}
+
+#contactForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#contactForm button {
+    background-color: #76A3B9;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+    background-color: #55899E;
+}
+
+#contactForm button[type="reset"] {
+    background-color: #E8E8E8;
+    color: #333;
+}
+
+#contactForm button[type="reset"]:hover {
+    background-color: #D6D6D6;
+}
+
+.iframe-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
